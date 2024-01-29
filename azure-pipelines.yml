@@ -12,7 +12,7 @@ strategy:
   matrix:
     Python36:
       PYTHON_VERSION: '3.6'
-  maxParallel: 1
+  maxParallel: 0
 
 steps:
 - task: UsePythonVersion@0
