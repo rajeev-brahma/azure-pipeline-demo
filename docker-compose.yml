@@ -1,0 +1,17 @@
+version: '3'
+services:
+  demo-app-service:
+    image: demo-app-service-dkr-img
+    container_name: demo-app-service
+    build:
+      context: .
+      dockerfile: ./Docker/Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - demo-app-0.1-net
+
+networks:
+  demo-app-0.1-net:
+    name: demo-app-0.1-net
+    driver: bridge
